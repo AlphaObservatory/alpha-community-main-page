@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { renderMetaTags, useQuerySubscription } from "react-datocms";
+import { StructuredText, renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "../components/container";
 import Layout from "../components/layout";
 import { request } from "../lib/datocms";
@@ -28,7 +28,6 @@ export async function getStaticProps({ preview, locale }) {
         }
       }
       ${metaTagsFragment}
-      ${responsiveImageFragment}
     `,
     preview,
   };
@@ -50,7 +49,6 @@ export async function getStaticProps({ preview, locale }) {
   };
 }
 
-
 export default function Index({ subscription }) {
   const {
     data: { home, site },
@@ -66,9 +64,8 @@ export default function Index({ subscription }) {
         <Container>
           <article>
             <h1>{home.title}</h1>
-            <p>{home.content}</p>
+            <StructuredText data={home.content}></StructuredText>
           </article>
-
         </Container>
       </Layout>
     </>
