@@ -55,7 +55,7 @@ export default function Index({ subscription }) {
   const {
     data: { home, site },
   } = useQuerySubscription(subscription);
-  const { locale, locales, asPath } = useRouter().locale;
+  const { locale } = useRouter().locale;
 
   const metaTags = home.seo.concat(site.favicon);
 
