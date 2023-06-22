@@ -4,6 +4,8 @@ import Container from "../components/container";
 import Layout from "../components/layout";
 import PostBody from "../components/post-body";
 import PostTitle from '../components/post-title'
+import LanguageBar from "../components/language-bar";
+
 
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
@@ -64,7 +66,9 @@ export default function Index({ subscription }) {
     <>
       <Layout preview={subscription.preview}>
         <Head>{renderMetaTags(metaTags)}</Head>
+
         <Container>
+          <LanguageBar />
           <article>
             <PostTitle>{home.title}</PostTitle>
             <PostBody content={home.content} />
