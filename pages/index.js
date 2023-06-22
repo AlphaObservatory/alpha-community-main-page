@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { StructuredText, renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "../components/container";
+import LanguageBar from "../components/language-bar";
 import Layout from "../components/layout";
 import PostBody from "../components/post-body";
 import PostTitle from '../components/post-title'
-import LanguageBar from "../components/language-bar";
-
+import PostHeader from "../components/post-header";
 
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
@@ -30,9 +30,15 @@ export async function getStaticProps({ preview, locale }) {
             ...metaTagsFragment
           }
           title
+          featuredImage {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+              ...responsiveImageFragment
+            }
+          }
         }
       }
       ${metaTagsFragment}
+      ${responsiveImageFragment}
     `,
     preview,
   };
@@ -71,6 +77,11 @@ export default function Index({ subscription }) {
           <LanguageBar />
           <article>
             <PostTitle>{home.title}</PostTitle>
+            <PostHeader
+              title={home.title}
+              coverImage={home.featuredImage}
+            />
+
             <PostBody content={home.content} />
 
           </article>
