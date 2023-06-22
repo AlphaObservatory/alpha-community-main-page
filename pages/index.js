@@ -2,6 +2,9 @@ import Head from "next/head";
 import { StructuredText, renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "../components/container";
 import Layout from "../components/layout";
+import PostBody from "../components/post-body";
+import PostTitle from '../components/post-title'
+
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { useRouter } from "next/router";
@@ -63,11 +66,12 @@ export default function Index({ subscription }) {
         <Head>{renderMetaTags(metaTags)}</Head>
         <Container>
           <article>
-            <h1>{home.title}</h1>
-            <StructuredText data={home.content}></StructuredText>
+            <PostTitle>{home.title}</PostTitle>
+            <PostBody content={home.content} />
+
           </article>
         </Container>
       </Layout>
     </>
-  );
+  );  
 }
