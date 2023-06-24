@@ -11,8 +11,11 @@ import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
 
 export async function getStaticPaths() {
-  const data = await request({ query: `{ allPosts { slug } }` });
-
+  //const data = await request({ query: `{ allPosts { slug } }` });
+  const data = {
+    allPosts: [],
+  }
+  
   return {
     paths: data.allPosts.map((post) => `/posts/${post.slug}`),
     fallback: false,
