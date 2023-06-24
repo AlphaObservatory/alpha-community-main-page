@@ -1,14 +1,9 @@
-import Alert from "./alert";
-import Footer from "./footer";
-
 export default function Layout({ preview, children }) {
   return (
     <>
-      <div className="min-h-screen">
-        <Alert preview={preview} />
+      <div className="min-h-screen bg-slate-50">
         <main>{children}</main>
       </div>
-      <Footer />
     </>
   );
 }
