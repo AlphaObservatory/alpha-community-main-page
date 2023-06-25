@@ -1,9 +1,11 @@
-export default function Layout({ preview, children }) {
-  return (
-    <>
-      <div className="min-h-screen bg-slate-50">
-        <main>{children}</main>
-      </div>
-    </>
-  );
-}
+import Footer from "./footer";
+import LanguageBar from "./language-bar";
+
+export default ({ preview, children }) => (
+  <div className="min-h-screen bg-slate-50">
+    <LanguageBar />
+    <main>{children}</main>
+    <Footer />
+  </div>
+);
+

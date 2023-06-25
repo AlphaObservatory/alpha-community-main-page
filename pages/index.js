@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { StructuredText, renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "../components/container";
-import LanguageBar from "../components/language-bar";
 import Layout from "../components/layout";
 import PostBody from "../components/post-body";
 import PostTitle from '../components/post-title'
@@ -74,7 +73,6 @@ export default function Index({ subscription }) {
         <Head>{renderMetaTags(metaTags)}</Head>
 
         <Container>
-          <LanguageBar />
           <article>
             <PostTitle>{home.title}</PostTitle>
             <PostHeader

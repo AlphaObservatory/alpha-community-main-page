@@ -4,6 +4,8 @@
         "fullhuman",
         "lanaguage",
         "nextjs",
+        "noopener",
+        "noreferrer",
         "purgecss"
     ]
 }
