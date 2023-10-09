@@ -5,7 +5,7 @@ import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 
 export default () => (
-  <footer classNameName="bg-slate-50 text-center text-neutral-600">
+  <footer className="bg-slate-50 text-center text-neutral-600">
     <Container>
       <div className="text-center pt-10">
         <div className="flex justify-center gap-6">
@@ -16,7 +16,7 @@ export default () => (
             </h6>
 
             <div className='flex gap-10'>
-              <a href='https://www.facebook.com/alphacommunityworld' classNameName="mx-3 font-bold hover:underline px-12 lg:px-8" target="_blank" rel="noopener noreferrer">
+              <a href='https://www.facebook.com/alphacommunityworld' className="mx-3 font-bold hover:underline px-12 lg:px-8" target="_blank" rel="noopener noreferrer">
                 <Image
                   priority
                   src={facebook}
