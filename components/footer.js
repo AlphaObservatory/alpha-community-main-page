@@ -24,7 +24,7 @@ export default () => (
                 />
               </a>
 
-              <a href="https://www.instagram.com/alphacommunity_world/" classNameName="mx-3 font-bold hover:underline" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/alphacommunity_world/" className="mx-3 font-bold hover:underline" target="_blank" rel="noopener noreferrer">
                 <Image
                   priority
                   src={instagram}

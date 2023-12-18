@@ -21,6 +21,21 @@ export default function LanguageBar() {
           Italian
         </span>
       </Link>
+      <Link href={currentPath} locale="tr">
+        <span className="underline hover:text-success duration-200 transition-colors p-1 cursor-pointer">
+          Turkish
+        </span>
+      </Link>
+      <Link href={currentPath} locale="fr-FR">
+        <span className="underline hover:text-success duration-200 transition-colors p-1 cursor-pointer">
+          French
+        </span>
+      </Link>
+      <Link href={currentPath} locale="fa">
+        <span className="underline hover:text-success duration-200 transition-colors p-1 cursor-pointer">
+          Persian
+        </span>
+      </Link>
     </section>
   );
 }
