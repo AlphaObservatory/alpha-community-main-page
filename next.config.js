@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   i18n: {
-    locales: ["en", "it", "es", "tr", "fa"],
+    locales: ["en", "it", "es", "tr", "fr", "fa"],
     defaultLocale: "en",
   },
   env: {

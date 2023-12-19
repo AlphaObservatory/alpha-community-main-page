@@ -26,7 +26,7 @@ export default function LanguageBar() {
           Turkish
         </span>
       </Link>
-      <Link href={currentPath} locale="fr-FR">
+      <Link href={currentPath} locale="fr">
         <span className="underline hover:text-success duration-200 transition-colors p-1 cursor-pointer">
           French
         </span>
